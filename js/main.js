@@ -37,7 +37,6 @@ const compareNumbers = () => {
 };
 const playAgain = () => {
   score.textContent = 20;
-  highScore.textContent = 0;
   hintMessage.textContent = "Start guessing...";
   guessNumber.textContent = "?";
   backgroundBody.style.backgroundColor = "#222";
