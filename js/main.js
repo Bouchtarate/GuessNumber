@@ -40,6 +40,8 @@ const playAgain = () => {
   hintMessage.textContent = "Start guessing...";
   guessNumber.textContent = "?";
   backgroundBody.style.backgroundColor = "#222";
+  randomNumber = Math.floor(Math.random() * (1 * 20) + 1);
+  console.log(randomNumber);
 };
 
 againBtn.addEventListener("click", playAgain);
