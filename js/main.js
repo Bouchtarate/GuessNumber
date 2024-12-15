@@ -12,10 +12,15 @@ let backgroundBody = document.querySelector("body");
 let randomNumber = Math.floor(Math.random() * (1 * 20) + 1);
 const compareNumbers = () => {
   console.log(randomNumber);
+  if (inputNumber.value === "") {
+    hintMessage.textContent = "Entre a number between 1 & 20";
+    return;
+  }
   if (randomNumber === Number(inputNumber.value)) {
     backgroundBody.style.backgroundColor = "#60b347";
     hintMessage.textContent = "👍 Congratulation you win";
     guessNumber.textContent = randomNumber;
+    inputNumber.value = "0";
     if (Number(highScore.textContent) < Number(score.textContent)) {
       highScore.textContent = score.textContent;
     }
